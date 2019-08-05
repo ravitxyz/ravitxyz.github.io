@@ -1,138 +1,31 @@
-# Balzac
+![](https://chibicode.github.io/duo/static/images/og.jpg)
 
-This is forked from [minimal mistakes](http://mademistakes.com). I needed some type of framework to build off as I have no experience with Jekyll. Michael set up an awesome dev environment for this which really helped speed up my progress. He also already wrote up an incredibly comprehensive readme.md so I basically copied all of it and replaced what was necessary. The design itself is my own and I cannot let you sell this or tweak the design for resale, unless I you [contact me](mailto:cole@coletownsend.com).
+I'm a Data Scientist.
 
+- **Demo Page**: [https://chibicode.github.io/duo/](https://chibicode.github.io/duo/)
+- **Example Page:** [My React tutorial](https://chibicode.com/react-js-introduction-for-people-who-know-just-enough-jquery-to-get-by/).
+- **GitHub Repo:** [chibicode/duo](https://github.com/chibicode/duo)
 
-If you'd like give me credit somewhere on your blog or tweet a shout out to
-[@twnsndco](https://twitter.com/twnsndco), that would be pretty sweet. 
+<a class="github-button" href="https://github.com/chibicode/duo" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star chibicode/duo on GitHub">Star</a>
 
-If you feel like donating — [Give it a thought.](http://gtat.me/balzac/donate)
+## Get Started
 
----
+```bash
+# Download and Install
+git clone https://github.com/chibicode/duo.git
+bundle install
 
-
-![Balzac for Jekyll](http://cl.ly/Qdzo/Screen%20Shot%202013-08-05%20at%205.35.11%20PM.jpg)
-![Balzac for Jekyll](http://cl.ly/Qdyh/Screen%20Shot%202013-08-05%20at%205.30.01%20PM.jpg)
-
-## Features:
-- flexible, uses max-width for responsive goodness
-- responsive drop down menu
-- retina images using @2x
-- post loop in the footer showing 3 latest posts
-- custom portfolio page for case studies
-
-## Basic Setup
-
-1. [Install Jekyll](http://jekyllrb.com) if you haven't already.
-2. Download this bad boy.
-3.  Fork the [Balzac repo](http://github.com/coletownsend/balzac-for-jekyll/)
-4. Twerk it out so it's just for you.
-5.  ???
-6.  Profit
-
-## [Preview the Theme](http://jekyll.gtat.me)
-=======
- [Preview the Theme](http://jekyll.gtat.me)
- 
-``` bash
-balzac-for-jekyll/
-├── _includes
-|    ├── footer.html  //site footer
-|    ├── head.html  //site head
-|    ├── head-dark.html  //dark site head for light pages
-├── _layouts
-|    ├── home.html  //homepage layout
-|    ├── page.html  //page layout
-|    ├── post-index.html  //post listing layout
-|    └── post.html  //post layout
-|    ├── post-no-feature.html  //feature image-less post layout
-├── _posts
-├── assets
-|    ├── css  //preprocessed less styles. good idea to minify
-|    ├── img  //images and graphics used in css and js
-|    ├── js
-|    |   ├── main.js  //jQuery plugins and settings
-|    |   └── vendor  //all 3rd party scripts
-|    └── sass 
-├── images  //images for posts and pages
-├── about.md  //about page
-├── articles.md  //lists all posts from latest to oldest
-└── index.md  //homepage. lists 5 most recent posts
+# Run
+bundle exec jekyll serve
+# open http://localhost:4000/duo
 ```
 
-# Customization
+## Next Steps
 
-## _config.yml
+See: [Customize Duo](https://chibicode.github.io/duo/posts/customize).
 
-Most of the variables found here are used in the .html files found in `_includes` if you need to add or remove anything. A good place to start would be to change the title, tagline, description, and url of your site. When working locally comment out `url` or else you will get a bunch of broken links because they are absolute and prefixed with `{{ site.url }}` in the various `_includes` and `_layouts`. Just remember to uncomment `url` when building for deployment or pushing to **gh-pages**...
+## Like or Retweet Appreciated :)
 
-### Owner/Author Information
+<blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Just published: Duo, A Simple Jekyll Theme.  <a href="https://t.co/G2kffR9e4U">https://t.co/G2kffR9e4U</a> <a href="https://twitter.com/jekyllrb?ref_src=twsrc%5Etfw">@jekyllrb</a></p>&mdash; Shu Uesugi (@chibicode) <a href="https://twitter.com/chibicode/status/923156795824128000?ref_src=twsrc%5Etfw">October 25, 2017</a></blockquote>
 
-Change your name, bio, Twitter url, email, Dribbble URL, etc.
-
-
-### Top Navigation Links
-
-Edit page/post titles and URLs to include in the site's navigation. For external links add `external: true`.
-
-``` yaml
-# sample top navigation links
-links:
-  - title: About Page
-    url: /about
-  - title: Other Page
-    url: /other-page
-  - title: External Page
-    url: http://coletownsend.com
-    external: true
-```
-
-## Other Stuff
-
-The rest is just your average Jekyll config settings. Nothing too crazy here...
-
-### _includes
-
-For the most part you can leave these as is since the author/owner details are pulled from `_config.yml`. That said you'll probably want to customize the copyright stuff in `footer.html` to your liking.
-
-### Adding Posts and Pages
-
-There are two main content layouts: `post.html` (for posts) and `page.html` (for pages). Both have large **feature images** that span the full-width of the screen, and both are meant for text heavy blog posts (or articles). 
-
-### Feature Images
-
-A good rule of thumb is to keep feature images nice and wide so you don't push the body text too far down. An image cropped around around 1024 x 256 pixels will keep file size down with an acceptable resolution for most devices. 
-
-``` yaml
-image:
-# local image 
-  feature: feature-image-filename.jpg
-# link image
-  feature: "http(s)://image.domain.com/feature-image-filename.jpg"
-```
-
-This makes the assumption that the feature image is in the *images* folder unless it has a link address. To add a feature image to a post or page just include the filename in the front matter like so.
-You can "serve" images responsively with retina.js. All you need to do is have a file with @2x before the file type. That should be placed in the *images* folder. You literally don't have to do anything other than that. 2 copies. One is linked. That's it.
-Ex:
-`cool-photo@2x.jpg` 
-
-**There is a default feature image that will show up for and posts. It isn't retina or anything. It's just there in case you want one but forget <3*
-
-#### If you don't want a feature image
-…just say so in the front-matter. Go to your-post-name.md and make sure it has this guy up top.
-```
-layout: post-no-feature
-```
-
-### Categories
-
-In the sample `_posts` folder you may have noticed `category: articles` in the front matter. I like keeping all posts grouped in the same folder. If you decide to rename or add categories you will need to modify the permalink in `articles.md` along with the filename (if renaming).
-
-For example. Say you want to group all your posts under `blog/` instead of `articles/`. In your post add `category: blog` to the front matter, rename or duplicate `articles.md` to `blog.md` and change the permalink in that file to `permalink: /blog/index.html`.
-
-If done correctly `/blog` should be a page listing all the site's posts.
-
-
-## License
-
-This is free to use, fork, do whatever you want. Please *do not* sell this design though. You don't need to link me to it, but please contact me if you intend to market this theme. I am releasing premium versions of this design for select CMS's. 
+<a href="https://github.com/chibicode/duo" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style><script async defer src="https://buttons.github.io/buttons.js"></script>
