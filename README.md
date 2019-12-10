@@ -1,4 +1,4 @@
-![Action picture of me napping](placeholder.jpg)
+![Action picture of me napping](headshot.jpg)
 
 Passionate about the intersection of products and businesses with data science and functional design.
 I'm currently working with Platforms Data Science team at Uber in San Francisco. <br><br>
